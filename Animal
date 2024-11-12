@@ -1,0 +1,80 @@
+// Base Animal class
+class Animal {
+    int age;
+    String gender;
+    double weight;
+
+    // Constructor
+    public Animal(int age, String gender, double weight) {
+        this.age = age;
+        this.gender = gender;
+        this.weight = weight;
+    }
+
+    // Method to simulate eating
+    public void eat() {
+        System.out.println("The animal is eating.");
+    }
+
+    // Method to simulate sleeping
+    public void sleep() {
+        System.out.println("The animal is sleeping.");
+    }
+}
+
+// Bird class extending Animal
+class Bird extends Animal {
+    // Constructor
+    public Bird(int age, String gender, double weight) {
+        super(age, gender, weight);
+    }
+
+    // Method to simulate flying
+    public void fly() {
+        System.out.println("The bird is flying.");
+    }
+}
+
+// Fish class extending Animal
+class Fish extends Animal {
+    // Constructor
+    public Fish(int age, String gender, double weight) {
+        super(age, gender, weight);
+    }
+
+    // Method to simulate swimming
+    public void swim() {
+        System.out.println("The fish is swimming.");
+    }
+}
+
+// Zoo class to create instances and test behaviors
+public class Zoo {
+    public static void main(String[] args) {
+        // Creating three instances of Animal
+        Animal lion = new Animal(5, "Male", 190.5);
+        Animal tiger = new Animal(4, "Female", 150.3);
+        Animal bear = new Animal(7, "Male", 220.8);
+
+        // Invoking methods for the Animal instances
+        lion.eat();
+        lion.sleep();
+        tiger.eat();
+        tiger.sleep();
+        bear.eat();
+        bear.sleep();
+
+        // Creating instances of Bird and Fish
+        Bird parrot = new Bird(2, "Female", 1.5);
+        Fish goldfish = new Fish(1, "Male", 0.2);
+
+        // Invoking methods for Bird and Fish
+        parrot.eat();
+        parrot.sleep();
+        parrot.fly();
+
+        goldfish.eat();
+        goldfish.sleep();
+        goldfish.swim();
+    }
+}
